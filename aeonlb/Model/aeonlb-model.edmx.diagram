@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7d0eff431b9f49d889e9fdcb2f1cffb7" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblHang" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblKhachHang" Width="1.5" PointX="3.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblNhanVien" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblNhapKho" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblPhieuBanHang" Width="1.5" PointX="6" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblYeuCauNhapKho" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblChiTietNhapKho" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblChiTietPhieuBanHang" Width="1.5" PointX="8.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.tblChiTietYeuCauNhap" Width="1.5" PointX="5.25" PointY="10.375" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_tblChiTietNhapKho_tblHang" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tblChiTietPhieuBanHang_tblHang" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tblChiTietYeuCauNhap_tblHang" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tblPhieuBanHang_tblKhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tblNhapKho_tblNhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tblPhieuBanHang_tblNhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tblYeuCauNhapKho_tblNhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tblChiTietNhapKho_tblNhapKho" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tblChiTietPhieuBanHang_tblPhieuBanHang" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_tblChiTietYeuCauNhap_tblYeuCauNhapKho" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
