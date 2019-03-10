@@ -64,5 +64,11 @@ namespace aeonlb.View
             GioiThieu gioithieu = new GioiThieu();
             gioithieu.ShowDialog(this);
         }
+
+        private void yeuCauNhapHangToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyYCNH ycnh = new QuanLyYCNH();
+            ycnh.ShowDialog(this);
+        }
     }
 }

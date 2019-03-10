@@ -80,50 +80,50 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\aeonlb-model.Context.cs">
+    <Compile Include="Model\DatabaseAEOLB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>aeonlb-model.Context.tt</DependentUpon>
+      <DependentUpon>DatabaseAEOLB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\aeonlb-model.cs">
+    <Compile Include="Model\DatabaseAEOLB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>aeonlb-model.tt</DependentUpon>
+      <DependentUpon>DatabaseAEOLB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\aeonlb-model.Designer.cs">
+    <Compile Include="Model\DatabaseAEOLB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>aeonlb-model.edmx</DependentUpon>
+      <DependentUpon>DatabaseAEOLB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\sysdiagram.cs">
-      <DependentUpon>aeonlb-model.tt</DependentUpon>
+      <DependentUpon>DatabaseAEOLB.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\tblChiTietNhapKho.cs">
-      <DependentUpon>aeonlb-model.tt</DependentUpon>
+      <DependentUpon>DatabaseAEOLB.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\tblChiTietPhieuBanHang.cs">
-      <DependentUpon>aeonlb-model.tt</DependentUpon>
+      <DependentUpon>DatabaseAEOLB.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\tblChiTietYeuCauNhap.cs">
-      <DependentUpon>aeonlb-model.tt</DependentUpon>
+      <DependentUpon>DatabaseAEOLB.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\tblHang.cs">
-      <DependentUpon>aeonlb-model.tt</DependentUpon>
+      <DependentUpon>DatabaseAEOLB.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\tblKhachHang.cs">
-      <DependentUpon>aeonlb-model.tt</DependentUpon>
+      <DependentUpon>DatabaseAEOLB.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\tblNhanVien.cs">
-      <DependentUpon>aeonlb-model.tt</DependentUpon>
+      <DependentUpon>DatabaseAEOLB.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\tblNhapKho.cs">
-      <DependentUpon>aeonlb-model.tt</DependentUpon>
+      <DependentUpon>DatabaseAEOLB.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\tblPhieuBanHang.cs">
-      <DependentUpon>aeonlb-model.tt</DependentUpon>
+      <DependentUpon>DatabaseAEOLB.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\tblYeuCauNhapKho.cs">
-      <DependentUpon>aeonlb-model.tt</DependentUpon>
+      <DependentUpon>DatabaseAEOLB.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -176,6 +176,12 @@
     <Compile Include="View\QuanLySanPham.Designer.cs">
       <DependentUpon>QuanLySanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\QuanLyYCNH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QuanLyYCNH.Designer.cs">
+      <DependentUpon>QuanLyYCNH.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,15 +208,18 @@
     <EmbeddedResource Include="View\DoiMatKhau.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\QuanLyYCNH.resx">
+      <DependentUpon>QuanLyYCNH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Model\aeonlb-model.edmx">
+    <EntityDeploy Include="Model\DatabaseAEOLB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>aeonlb-model.Designer.cs</LastGenOutput>
+      <LastGenOutput>DatabaseAEOLB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\aeonlb-model.edmx.diagram">
-      <DependentUpon>aeonlb-model.edmx</DependentUpon>
+    <None Include="Model\DatabaseAEOLB.edmx.diagram">
+      <DependentUpon>DatabaseAEOLB.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -245,15 +254,22 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>cnpm-aeonlb.mdf</DependentUpon>
     </Content>
-    <Content Include="Model\aeonlb-model.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>aeonlb-model.edmx</DependentUpon>
-      <LastGenOutput>aeonlb-model.Context.cs</LastGenOutput>
+    <Content Include="cnpm-aeonlb.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Model\aeonlb-model.tt">
+    <Content Include="cnpm-aeonlb_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>cnpm-aeonlb.mdf</DependentUpon>
+    </Content>
+    <Content Include="Model\DatabaseAEOLB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>aeonlb-model.edmx</DependentUpon>
-      <LastGenOutput>aeonlb-model.cs</LastGenOutput>
+      <DependentUpon>DatabaseAEOLB.edmx</DependentUpon>
+      <LastGenOutput>DatabaseAEOLB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\DatabaseAEOLB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DatabaseAEOLB.edmx</DependentUpon>
+      <LastGenOutput>DatabaseAEOLB.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

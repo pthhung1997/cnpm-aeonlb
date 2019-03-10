@@ -50,9 +50,8 @@ D:\cnpm\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.View.TrangChu.resources
 D:\cnpm\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.csproj.GenerateResource.Cache
 D:\cnpm-aeonlb\aeonlb\bin\Debug\App_Data\cnpm-aeonlb.mdf
 D:\cnpm-aeonlb\aeonlb\bin\Debug\App_Data\cnpm-aeonlb_log.ldf
-D:\cnpm-aeonlb\aeonlb\bin\Debug\aeonlb.exe.config
-D:\cnpm-aeonlb\aeonlb\bin\Debug\aeonlb.exe
-D:\cnpm-aeonlb\aeonlb\bin\Debug\aeonlb.pdb
+D:\cnpm-aeonlb\aeonlb\bin\Debug\cnpm-aeonlb.mdf
+D:\cnpm-aeonlb\aeonlb\bin\Debug\cnpm-aeonlb_log.ldf
 D:\cnpm-aeonlb\aeonlb\bin\Debug\EntityFramework.dll
 D:\cnpm-aeonlb\aeonlb\bin\Debug\EntityFramework.SqlServer.dll
 D:\cnpm-aeonlb\aeonlb\bin\Debug\EntityFramework.xml
@@ -61,7 +60,11 @@ D:\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.csprojResolveAssemblyReference.cache
 D:\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.Login.resources
 D:\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.Properties.Resources.resources
 D:\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.View.DoiMatKhau.resources
+D:\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.View.QuanLyYCNH.resources
 D:\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.View.TrangChu.resources
 D:\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.csproj.GenerateResource.Cache
 D:\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.exe
 D:\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.pdb
+D:\cnpm-aeonlb\aeonlb\bin\Debug\aeonlb.exe.config
+D:\cnpm-aeonlb\aeonlb\bin\Debug\aeonlb.exe
+D:\cnpm-aeonlb\aeonlb\bin\Debug\aeonlb.pdb
