@@ -36,5 +36,16 @@ namespace aeonlb.Controller
             }
             return chucvu;
         }
+        public void updateNhanVien(tblNhanVien nhanvien)
+        {
+            using (var db = new Entities())
+            {
+                var update = (from u in db.tblNhanViens where u.sMaNV == nhanvien.sMaNV select u).Single();
+                update.sChucVu = nhanvien.sChucVu;
+                update.sHoTenNV = nhanvien.sHoTenNV;
+                update.sMatKhau = nhanvien.sMatKhau;
+                db.SaveChanges();
+            }
+        }
     }
 }

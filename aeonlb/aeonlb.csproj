@@ -73,7 +73,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\ChiTietNhapKhoController.cs" />
+    <Compile Include="Controller\ChiTietPhieuBanHangController.cs" />
+    <Compile Include="Controller\ChiTietYeuCauNhapController.cs" />
+    <Compile Include="Controller\HangController.cs" />
+    <Compile Include="Controller\KhachHangController.cs" />
     <Compile Include="Controller\NhanvienController.cs" />
+    <Compile Include="Controller\NhapKhoController.cs" />
+    <Compile Include="Controller\PhieuBanHangController.cs" />
+    <Compile Include="Controller\YeuCauNhapKhoController.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +216,9 @@
     <EmbeddedResource Include="View\DoiMatKhau.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\QuanLyNhanVien.resx">
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\QuanLyYCNH.resx">
       <DependentUpon>QuanLyYCNH.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,13 +262,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="App_Data\cnpm-aeonlb_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>cnpm-aeonlb.mdf</DependentUpon>
-    </Content>
-    <Content Include="cnpm-aeonlb.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="cnpm-aeonlb_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>cnpm-aeonlb.mdf</DependentUpon>
     </Content>
