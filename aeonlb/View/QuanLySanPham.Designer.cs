@@ -48,6 +48,8 @@
 			this.btupdate = new System.Windows.Forms.Button();
 			this.bthuy = new System.Windows.Forms.Button();
 			this.tblHangTableAdapter = new aeonlb._cnpm_aeonlbDataSetTableAdapters.tblHangTableAdapter();
+			this.txtTimKiem = new System.Windows.Forms.TextBox();
+			this.btnTimKiem = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.tblHangBindingSource1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this._cnpm_aeonlbDataSet)).BeginInit();
@@ -130,7 +132,7 @@
 			// sTenHang
 			// 
 			this.sTenHang.AutoSize = true;
-			this.sTenHang.Location = new System.Drawing.Point(387, 46);
+			this.sTenHang.Location = new System.Drawing.Point(412, 30);
 			this.sTenHang.Name = "sTenHang";
 			this.sTenHang.Size = new System.Drawing.Size(55, 13);
 			this.sTenHang.TabIndex = 1;
@@ -138,14 +140,14 @@
 			// 
 			// txtTenHang
 			// 
-			this.txtTenHang.Location = new System.Drawing.Point(457, 43);
+			this.txtTenHang.Location = new System.Drawing.Point(482, 27);
 			this.txtTenHang.Name = "txtTenHang";
 			this.txtTenHang.Size = new System.Drawing.Size(100, 20);
 			this.txtTenHang.TabIndex = 2;
 			// 
 			// txtMoTa
 			// 
-			this.txtMoTa.Location = new System.Drawing.Point(457, 97);
+			this.txtMoTa.Location = new System.Drawing.Point(482, 81);
 			this.txtMoTa.Name = "txtMoTa";
 			this.txtMoTa.Size = new System.Drawing.Size(100, 20);
 			this.txtMoTa.TabIndex = 4;
@@ -153,7 +155,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(396, 100);
+			this.label2.Location = new System.Drawing.Point(421, 84);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(38, 13);
 			this.label2.TabIndex = 3;
@@ -161,7 +163,7 @@
 			// 
 			// txtGiaBan
 			// 
-			this.txtGiaBan.Location = new System.Drawing.Point(457, 150);
+			this.txtGiaBan.Location = new System.Drawing.Point(482, 134);
 			this.txtGiaBan.Name = "txtGiaBan";
 			this.txtGiaBan.Size = new System.Drawing.Size(100, 20);
 			this.txtGiaBan.TabIndex = 6;
@@ -169,7 +171,7 @@
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(396, 153);
+			this.label3.Location = new System.Drawing.Point(421, 137);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(45, 13);
 			this.label3.TabIndex = 5;
@@ -177,7 +179,7 @@
 			// 
 			// btupdate
 			// 
-			this.btupdate.Location = new System.Drawing.Point(399, 200);
+			this.btupdate.Location = new System.Drawing.Point(424, 184);
 			this.btupdate.Name = "btupdate";
 			this.btupdate.Size = new System.Drawing.Size(75, 23);
 			this.btupdate.TabIndex = 7;
@@ -187,7 +189,7 @@
 			// 
 			// bthuy
 			// 
-			this.bthuy.Location = new System.Drawing.Point(495, 200);
+			this.bthuy.Location = new System.Drawing.Point(520, 184);
 			this.bthuy.Name = "bthuy";
 			this.bthuy.Size = new System.Drawing.Size(75, 23);
 			this.bthuy.TabIndex = 8;
@@ -199,11 +201,30 @@
 			// 
 			this.tblHangTableAdapter.ClearBeforeFill = true;
 			// 
+			// txtTimKiem
+			// 
+			this.txtTimKiem.Location = new System.Drawing.Point(12, 23);
+			this.txtTimKiem.Name = "txtTimKiem";
+			this.txtTimKiem.Size = new System.Drawing.Size(267, 20);
+			this.txtTimKiem.TabIndex = 9;
+			// 
+			// btnTimKiem
+			// 
+			this.btnTimKiem.Location = new System.Drawing.Point(306, 23);
+			this.btnTimKiem.Name = "btnTimKiem";
+			this.btnTimKiem.Size = new System.Drawing.Size(75, 23);
+			this.btnTimKiem.TabIndex = 10;
+			this.btnTimKiem.Text = "Tìm kiếm";
+			this.btnTimKiem.UseVisualStyleBackColor = true;
+			this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+			// 
 			// QuanLySanPham
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(630, 325);
+			this.Controls.Add(this.btnTimKiem);
+			this.Controls.Add(this.txtTimKiem);
 			this.Controls.Add(this.bthuy);
 			this.Controls.Add(this.btupdate);
 			this.Controls.Add(this.txtGiaBan);
@@ -246,5 +267,7 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn sDonViTinhDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn fGiaBanDataGridViewTextBoxColumn;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+		private System.Windows.Forms.TextBox txtTimKiem;
+		private System.Windows.Forms.Button btnTimKiem;
 	}
 }

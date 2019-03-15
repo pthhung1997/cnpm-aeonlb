@@ -63,15 +63,37 @@ namespace aeonlb.View
 			{
 				using (var db = new Entities())
 				{
-					db.Database.Connection.Open();
 					MaHang = dgvSanPham.SelectedCells[5].Value.ToString();
 					var update = (from u in db.tblHangs where u.sMaHang == MaHang select u).Single();
 					update.sTenHang = txtTenHang.Text;
 					update.sMotaHang = txtMoTa.Text;
 					update.fGiaBan = (float)Convert.ToDouble(txtGiaBan.Text.ToString());
 					db.SaveChanges();
-					//QuanLySanPham_Load(sender,e);
-					//db.Database.Connection.Close();
+					QuanLySanPham_Load(sender,e);
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.ToString(), "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		private void btnTimKiem_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				using (var db = new Entities())
+				{
+					if(txtTimKiem.Text != "")
+					{
+						string val = txtTimKiem.Text.ToString();
+						var select = from s in db.tblHangs where s.sTenHang.Contains(val) select s;
+						dgvSanPham.DataSource = select.ToList();
+					}
+					else
+					{
+						QuanLySanPham_Load(sender, e);
+					}
 				}
 			}
 			catch (Exception ex)
