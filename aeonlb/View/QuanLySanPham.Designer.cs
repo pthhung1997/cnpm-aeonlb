@@ -30,6 +30,12 @@
         {
 			this.components = new System.ComponentModel.Container();
 			this.dgvSanPham = new System.Windows.Forms.DataGridView();
+			this.sTenHangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.sMotaHangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.fSLHienTaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.sDonViTinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.fGiaBanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.tblHangBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
 			this._cnpm_aeonlbDataSet = new aeonlb._cnpm_aeonlbDataSet();
 			this.tblHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -42,12 +48,6 @@
 			this.btupdate = new System.Windows.Forms.Button();
 			this.bthuy = new System.Windows.Forms.Button();
 			this.tblHangTableAdapter = new aeonlb._cnpm_aeonlbDataSetTableAdapters.tblHangTableAdapter();
-			this.sTenHangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.sMotaHangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.fSLHienTaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.sDonViTinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.fGiaBanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.tblHangBindingSource1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this._cnpm_aeonlbDataSet)).BeginInit();
@@ -66,7 +66,7 @@
             this.fGiaBanDataGridViewTextBoxColumn,
             this.Column1});
 			this.dgvSanPham.DataSource = this.tblHangBindingSource1;
-			this.dgvSanPham.Location = new System.Drawing.Point(12, 12);
+			this.dgvSanPham.Location = new System.Drawing.Point(12, 76);
 			this.dgvSanPham.MultiSelect = false;
 			this.dgvSanPham.Name = "dgvSanPham";
 			this.dgvSanPham.Size = new System.Drawing.Size(369, 237);
@@ -74,6 +74,43 @@
 			this.dgvSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellClick);
 			this.dgvSanPham.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellContentClick);
 			this.dgvSanPham.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvSanPham_DataBindingComplete);
+			// 
+			// sTenHangDataGridViewTextBoxColumn
+			// 
+			this.sTenHangDataGridViewTextBoxColumn.DataPropertyName = "sTenHang";
+			this.sTenHangDataGridViewTextBoxColumn.HeaderText = "Tên Hàng";
+			this.sTenHangDataGridViewTextBoxColumn.Name = "sTenHangDataGridViewTextBoxColumn";
+			// 
+			// sMotaHangDataGridViewTextBoxColumn
+			// 
+			this.sMotaHangDataGridViewTextBoxColumn.DataPropertyName = "sMotaHang";
+			this.sMotaHangDataGridViewTextBoxColumn.HeaderText = "Mô Tả";
+			this.sMotaHangDataGridViewTextBoxColumn.Name = "sMotaHangDataGridViewTextBoxColumn";
+			// 
+			// fSLHienTaiDataGridViewTextBoxColumn
+			// 
+			this.fSLHienTaiDataGridViewTextBoxColumn.DataPropertyName = "fSLHienTai";
+			this.fSLHienTaiDataGridViewTextBoxColumn.HeaderText = "Số Lượng";
+			this.fSLHienTaiDataGridViewTextBoxColumn.Name = "fSLHienTaiDataGridViewTextBoxColumn";
+			// 
+			// sDonViTinhDataGridViewTextBoxColumn
+			// 
+			this.sDonViTinhDataGridViewTextBoxColumn.DataPropertyName = "sDonViTinh";
+			this.sDonViTinhDataGridViewTextBoxColumn.HeaderText = "Đơn vị tính";
+			this.sDonViTinhDataGridViewTextBoxColumn.Name = "sDonViTinhDataGridViewTextBoxColumn";
+			// 
+			// fGiaBanDataGridViewTextBoxColumn
+			// 
+			this.fGiaBanDataGridViewTextBoxColumn.DataPropertyName = "fGiaBan";
+			this.fGiaBanDataGridViewTextBoxColumn.HeaderText = "Giá Bán";
+			this.fGiaBanDataGridViewTextBoxColumn.Name = "fGiaBanDataGridViewTextBoxColumn";
+			// 
+			// Column1
+			// 
+			this.Column1.DataPropertyName = "sMaHang";
+			this.Column1.HeaderText = "Ma Hang";
+			this.Column1.Name = "Column1";
+			this.Column1.Visible = false;
 			// 
 			// tblHangBindingSource1
 			// 
@@ -162,48 +199,11 @@
 			// 
 			this.tblHangTableAdapter.ClearBeforeFill = true;
 			// 
-			// sTenHangDataGridViewTextBoxColumn
-			// 
-			this.sTenHangDataGridViewTextBoxColumn.DataPropertyName = "sTenHang";
-			this.sTenHangDataGridViewTextBoxColumn.HeaderText = "Tên Hàng";
-			this.sTenHangDataGridViewTextBoxColumn.Name = "sTenHangDataGridViewTextBoxColumn";
-			// 
-			// sMotaHangDataGridViewTextBoxColumn
-			// 
-			this.sMotaHangDataGridViewTextBoxColumn.DataPropertyName = "sMotaHang";
-			this.sMotaHangDataGridViewTextBoxColumn.HeaderText = "Mô Tả";
-			this.sMotaHangDataGridViewTextBoxColumn.Name = "sMotaHangDataGridViewTextBoxColumn";
-			// 
-			// fSLHienTaiDataGridViewTextBoxColumn
-			// 
-			this.fSLHienTaiDataGridViewTextBoxColumn.DataPropertyName = "fSLHienTai";
-			this.fSLHienTaiDataGridViewTextBoxColumn.HeaderText = "Số Lượng";
-			this.fSLHienTaiDataGridViewTextBoxColumn.Name = "fSLHienTaiDataGridViewTextBoxColumn";
-			// 
-			// sDonViTinhDataGridViewTextBoxColumn
-			// 
-			this.sDonViTinhDataGridViewTextBoxColumn.DataPropertyName = "sDonViTinh";
-			this.sDonViTinhDataGridViewTextBoxColumn.HeaderText = "Đơn vị tính";
-			this.sDonViTinhDataGridViewTextBoxColumn.Name = "sDonViTinhDataGridViewTextBoxColumn";
-			// 
-			// fGiaBanDataGridViewTextBoxColumn
-			// 
-			this.fGiaBanDataGridViewTextBoxColumn.DataPropertyName = "fGiaBan";
-			this.fGiaBanDataGridViewTextBoxColumn.HeaderText = "Giá Bán";
-			this.fGiaBanDataGridViewTextBoxColumn.Name = "fGiaBanDataGridViewTextBoxColumn";
-			// 
-			// Column1
-			// 
-			this.Column1.DataPropertyName = "sMaHang";
-			this.Column1.HeaderText = "Ma Hang";
-			this.Column1.Name = "Column1";
-			this.Column1.Visible = false;
-			// 
 			// QuanLySanPham
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(594, 261);
+			this.ClientSize = new System.Drawing.Size(630, 325);
 			this.Controls.Add(this.bthuy);
 			this.Controls.Add(this.btupdate);
 			this.Controls.Add(this.txtGiaBan);
