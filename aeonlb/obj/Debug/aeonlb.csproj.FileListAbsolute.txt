@@ -76,6 +76,7 @@ D:\cnpm-aeonlb\aeonlb\bin\Debug\EntityFramework.dll
 D:\cnpm-aeonlb\aeonlb\bin\Debug\EntityFramework.SqlServer.dll
 D:\cnpm-aeonlb\aeonlb\bin\Debug\EntityFramework.xml
 D:\cnpm-aeonlb\aeonlb\bin\Debug\EntityFramework.SqlServer.xml
+D:\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.csprojResolveAssemblyReference.cache
 D:\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.Login.resources
 D:\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.Properties.Resources.resources
 D:\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.View.DoiMatKhau.resources
@@ -85,4 +86,3 @@ D:\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.View.TrangChu.resources
 D:\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.csproj.GenerateResource.Cache
 D:\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.exe
 D:\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.pdb
-D:\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.csprojResolveAssemblyReference.cache
