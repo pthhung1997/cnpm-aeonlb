@@ -16,5 +16,10 @@ namespace aeonlb.View
         {
             InitializeComponent();
         }
+
+        private void DoiMatKhau_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

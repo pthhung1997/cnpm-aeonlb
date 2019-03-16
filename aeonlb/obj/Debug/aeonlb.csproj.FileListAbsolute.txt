@@ -65,3 +65,23 @@ D:\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.View.TrangChu.resources
 D:\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.csproj.GenerateResource.Cache
 D:\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.exe
 D:\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.pdb
+C:\Users\hieugach\Documents\Visual Studio 2013\Projects\cnpm-aeonlb\aeonlb\bin\Debug\aeonlb.exe.config
+C:\Users\hieugach\Documents\Visual Studio 2013\Projects\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.exe
+C:\Users\hieugach\Documents\Visual Studio 2013\Projects\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.pdb
+C:\Users\hieugach\Documents\Visual Studio 2013\Projects\cnpm-aeonlb\aeonlb\bin\Debug\App_Data\cnpm-aeonlb.mdf
+C:\Users\hieugach\Documents\Visual Studio 2013\Projects\cnpm-aeonlb\aeonlb\bin\Debug\App_Data\cnpm-aeonlb_log.ldf
+C:\Users\hieugach\Documents\Visual Studio 2013\Projects\cnpm-aeonlb\aeonlb\bin\Debug\aeonlb.exe
+C:\Users\hieugach\Documents\Visual Studio 2013\Projects\cnpm-aeonlb\aeonlb\bin\Debug\aeonlb.pdb
+C:\Users\hieugach\Documents\Visual Studio 2013\Projects\cnpm-aeonlb\aeonlb\bin\Debug\EntityFramework.dll
+C:\Users\hieugach\Documents\Visual Studio 2013\Projects\cnpm-aeonlb\aeonlb\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hieugach\Documents\Visual Studio 2013\Projects\cnpm-aeonlb\aeonlb\bin\Debug\EntityFramework.xml
+C:\Users\hieugach\Documents\Visual Studio 2013\Projects\cnpm-aeonlb\aeonlb\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hieugach\Documents\Visual Studio 2013\Projects\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.csprojResolveAssemblyReference.cache
+C:\Users\hieugach\Documents\Visual Studio 2013\Projects\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.Login.resources
+C:\Users\hieugach\Documents\Visual Studio 2013\Projects\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.Properties.Resources.resources
+C:\Users\hieugach\Documents\Visual Studio 2013\Projects\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.View.DoiMatKhau.resources
+C:\Users\hieugach\Documents\Visual Studio 2013\Projects\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.View.TrangChu.resources
+C:\Users\hieugach\Documents\Visual Studio 2013\Projects\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.csproj.GenerateResource.Cache
+C:\Users\hieugach\Documents\Visual Studio 2013\Projects\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.View.ChiTietYeuCauNhapHang.resources
+C:\Users\hieugach\Documents\Visual Studio 2013\Projects\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.View.QuanLyNhapHang.resources
+C:\Users\hieugach\Documents\Visual Studio 2013\Projects\cnpm-aeonlb\aeonlb\obj\Debug\aeonlb.View.YeuCauNhap.resources
