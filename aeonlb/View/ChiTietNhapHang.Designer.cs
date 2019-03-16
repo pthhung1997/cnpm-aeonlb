@@ -29,40 +29,69 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this._cnpm_aeonlbDataSet = new aeonlb._cnpm_aeonlbDataSet();
-            this.tblChiTietNhapKhoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblChiTietNhapKhoTableAdapter = new aeonlb._cnpm_aeonlbDataSetTableAdapters.tblChiTietNhapKhoTableAdapter();
+            this.dgvCTNH = new System.Windows.Forms.DataGridView();
             this.sMaHangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sMaNhapKhoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fSoLuongThucNhapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._cnpm_aeonlbDataSet)).BeginInit();
+            this.tblChiTietNhapKhoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._cnpm_aeonlbDataSet = new aeonlb._cnpm_aeonlbDataSet();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtMahang = new System.Windows.Forms.TextBox();
+            this.txtMakhonhap = new System.Windows.Forms.TextBox();
+            this.txtSoluongthucnhap = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.tblChiTietNhapKhoTableAdapter = new aeonlb._cnpm_aeonlbDataSetTableAdapters.tblChiTietNhapKhoTableAdapter();
+            this.button4 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCTNH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblChiTietNhapKhoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cnpm_aeonlbDataSet)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvCTNH
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvCTNH.AutoGenerateColumns = false;
+            this.dgvCTNH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCTNH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sMaHangDataGridViewTextBoxColumn,
             this.sMaNhapKhoDataGridViewTextBoxColumn,
             this.fSoLuongThucNhapDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tblChiTietNhapKhoBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(308, 53);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(343, 280);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvCTNH.DataSource = this.tblChiTietNhapKhoBindingSource;
+            this.dgvCTNH.Location = new System.Drawing.Point(488, 49);
+            this.dgvCTNH.Name = "dgvCTNH";
+            this.dgvCTNH.Size = new System.Drawing.Size(343, 280);
+            this.dgvCTNH.TabIndex = 0;
+            // 
+            // sMaHangDataGridViewTextBoxColumn
+            // 
+            this.sMaHangDataGridViewTextBoxColumn.DataPropertyName = "sMaHang";
+            this.sMaHangDataGridViewTextBoxColumn.HeaderText = "sMaHang";
+            this.sMaHangDataGridViewTextBoxColumn.Name = "sMaHangDataGridViewTextBoxColumn";
+            // 
+            // sMaNhapKhoDataGridViewTextBoxColumn
+            // 
+            this.sMaNhapKhoDataGridViewTextBoxColumn.DataPropertyName = "sMaNhapKho";
+            this.sMaNhapKhoDataGridViewTextBoxColumn.HeaderText = "sMaNhapKho";
+            this.sMaNhapKhoDataGridViewTextBoxColumn.Name = "sMaNhapKhoDataGridViewTextBoxColumn";
+            // 
+            // fSoLuongThucNhapDataGridViewTextBoxColumn
+            // 
+            this.fSoLuongThucNhapDataGridViewTextBoxColumn.DataPropertyName = "fSoLuongThucNhap";
+            this.fSoLuongThucNhapDataGridViewTextBoxColumn.HeaderText = "fSoLuongThucNhap";
+            this.fSoLuongThucNhapDataGridViewTextBoxColumn.Name = "fSoLuongThucNhapDataGridViewTextBoxColumn";
+            // 
+            // tblChiTietNhapKhoBindingSource
+            // 
+            this.tblChiTietNhapKhoBindingSource.DataMember = "tblChiTietNhapKho";
+            this.tblChiTietNhapKhoBindingSource.DataSource = this._cnpm_aeonlbDataSet;
+            // 
+            // _cnpm_aeonlbDataSet
+            // 
+            this._cnpm_aeonlbDataSet.DataSetName = "_cnpm_aeonlbDataSet";
+            this._cnpm_aeonlbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -91,26 +120,26 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Số lượng thực nhập:";
             // 
-            // textBox1
+            // txtMahang
             // 
-            this.textBox1.Location = new System.Drawing.Point(145, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(130, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtMahang.Location = new System.Drawing.Point(145, 61);
+            this.txtMahang.Name = "txtMahang";
+            this.txtMahang.Size = new System.Drawing.Size(130, 20);
+            this.txtMahang.TabIndex = 4;
             // 
-            // textBox2
+            // txtMakhonhap
             // 
-            this.textBox2.Location = new System.Drawing.Point(145, 120);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(130, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtMakhonhap.Location = new System.Drawing.Point(145, 120);
+            this.txtMakhonhap.Name = "txtMakhonhap";
+            this.txtMakhonhap.Size = new System.Drawing.Size(130, 20);
+            this.txtMakhonhap.TabIndex = 5;
             // 
-            // textBox3
+            // txtSoluongthucnhap
             // 
-            this.textBox3.Location = new System.Drawing.Point(145, 173);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(130, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtSoluongthucnhap.Location = new System.Drawing.Point(145, 173);
+            this.txtSoluongthucnhap.Name = "txtSoluongthucnhap";
+            this.txtSoluongthucnhap.Size = new System.Drawing.Size(130, 20);
+            this.txtSoluongthucnhap.TabIndex = 6;
             // 
             // button1
             // 
@@ -120,6 +149,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "Thêm";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -129,6 +159,7 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Sửa";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -138,60 +169,44 @@
             this.button3.TabIndex = 9;
             this.button3.Text = "Xóa";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // _cnpm_aeonlbDataSet
-            // 
-            this._cnpm_aeonlbDataSet.DataSetName = "_cnpm_aeonlbDataSet";
-            this._cnpm_aeonlbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblChiTietNhapKhoBindingSource
-            // 
-            this.tblChiTietNhapKhoBindingSource.DataMember = "tblChiTietNhapKho";
-            this.tblChiTietNhapKhoBindingSource.DataSource = this._cnpm_aeonlbDataSet;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // tblChiTietNhapKhoTableAdapter
             // 
             this.tblChiTietNhapKhoTableAdapter.ClearBeforeFill = true;
             // 
-            // sMaHangDataGridViewTextBoxColumn
+            // button4
             // 
-            this.sMaHangDataGridViewTextBoxColumn.DataPropertyName = "sMaHang";
-            this.sMaHangDataGridViewTextBoxColumn.HeaderText = "sMaHang";
-            this.sMaHangDataGridViewTextBoxColumn.Name = "sMaHangDataGridViewTextBoxColumn";
-            // 
-            // sMaNhapKhoDataGridViewTextBoxColumn
-            // 
-            this.sMaNhapKhoDataGridViewTextBoxColumn.DataPropertyName = "sMaNhapKho";
-            this.sMaNhapKhoDataGridViewTextBoxColumn.HeaderText = "sMaNhapKho";
-            this.sMaNhapKhoDataGridViewTextBoxColumn.Name = "sMaNhapKhoDataGridViewTextBoxColumn";
-            // 
-            // fSoLuongThucNhapDataGridViewTextBoxColumn
-            // 
-            this.fSoLuongThucNhapDataGridViewTextBoxColumn.DataPropertyName = "fSoLuongThucNhap";
-            this.fSoLuongThucNhapDataGridViewTextBoxColumn.HeaderText = "fSoLuongThucNhap";
-            this.fSoLuongThucNhapDataGridViewTextBoxColumn.Name = "fSoLuongThucNhapDataGridViewTextBoxColumn";
+            this.button4.Location = new System.Drawing.Point(337, 236);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "Tìm Kiếm";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // ChiTietNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 390);
+            this.ClientSize = new System.Drawing.Size(904, 390);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSoluongthucnhap);
+            this.Controls.Add(this.txtMakhonhap);
+            this.Controls.Add(this.txtMahang);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvCTNH);
             this.Name = "ChiTietNhapHang";
             this.Text = "ChiTietNhapHang";
             this.Load += new System.EventHandler(this.ChiTietNhapHang_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._cnpm_aeonlbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCTNH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblChiTietNhapKhoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cnpm_aeonlbDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,13 +214,13 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCTNH;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtMahang;
+        private System.Windows.Forms.TextBox txtMakhonhap;
+        private System.Windows.Forms.TextBox txtSoluongthucnhap;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -215,5 +230,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sMaHangDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sMaNhapKhoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fSoLuongThucNhapDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button4;
     }
 }
