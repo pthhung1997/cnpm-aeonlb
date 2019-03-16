@@ -16,5 +16,12 @@ namespace aeonlb.View
         {
             InitializeComponent();
         }
+
+        private void YeuCauNhap_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the '_cnpm_aeonlbDataSet.tblYeuCauNhapKho' table. You can move, or remove it, as needed.
+            this.tblYeuCauNhapKhoTableAdapter.Fill(this._cnpm_aeonlbDataSet.tblYeuCauNhapKho);
+
+        }
     }
 }

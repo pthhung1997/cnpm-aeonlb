@@ -184,17 +184,17 @@
     <Compile Include="View\QuanLySanPham.Designer.cs">
       <DependentUpon>QuanLySanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\QuanLyYCNH.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\QuanLyYCNH.Designer.cs">
-      <DependentUpon>QuanLyYCNH.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\TrangChu.Designer.cs">
       <DependentUpon>TrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QuanLyYCNH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QuanLyYCNH.Designer.cs">
+      <DependentUpon>QuanLyYCNH.cs</DependentUpon>
     </Compile>
     <Compile Include="_cnpm_aeonlbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -222,11 +222,11 @@
     <EmbeddedResource Include="View\QuanLySanPham.resx">
       <DependentUpon>QuanLySanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\QuanLyYCNH.resx">
-      <DependentUpon>QuanLyYCNH.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QuanLyYCNH.resx">
+      <DependentUpon>QuanLyYCNH.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model\AEONLBDataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
