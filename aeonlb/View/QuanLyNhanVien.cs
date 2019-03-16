@@ -33,7 +33,7 @@ namespace aeonlb.View
             cbbJob.Items.Add("THUNGAN");
             cbbJob.Items.Add("ADMIN");
 
-            btnLuu.Enabled = false;
+  //          btnLuu.Enabled = false;
             btnResetMatKhau.Enabled = false;
             btnXoa.Enabled = false;
 
@@ -64,11 +64,13 @@ namespace aeonlb.View
             nhanvien.sMatKhau = matkhau;
             nhanvien.sTenDangNhap = txtUsername.Text;
             nhanvien.sMaNV = id;
-            
+            //MessageBox.Show("Xin chào " + data.sHoTenNV + "!", "Đăng nhập thành công!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             if (id == "")
             {
-
-            }else
+                id = Guid.NewGuid().ToString();
+                _cnpm_aeonlbDataSet.tblNhanVienRow newRow = 
+            }
+            else
             {
                 nhanvienController.updateNhanVien(nhanvien);
                 QuanLyNhanVien_Load(sender, e);
@@ -81,6 +83,7 @@ namespace aeonlb.View
             id = "";
             txtUsername.Text = "";
             txtName.Text = "";
+            txtUsername.Enabled = true;
             cbbJob.SelectedIndex = -1;
 
             btnLuu.Enabled = false;
@@ -107,6 +110,7 @@ namespace aeonlb.View
             cbbJob.SelectedIndex = cbbJob.Items.IndexOf(cbb);
             matkhau = dgvNhanVien.SelectedRows[0].Cells[4].Value.ToString().Trim();
 
+            txtUsername.Enabled = false;
             btnLuu.Enabled = true;
             btnResetMatKhau.Enabled = true;
             btnXoa.Enabled = true;
