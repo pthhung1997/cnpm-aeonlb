@@ -25,9 +25,9 @@ namespace aeonlb.Model
         public string sMaHang { get; set; }
         public string sTenHang { get; set; }
         public string sMotaHang { get; set; }
-        public float fSLHienTai { get; set; }
+        public double fSLHienTai { get; set; }
         public string sDonViTinh { get; set; }
-        public float fGiaBan { get; set; }
+        public double fGiaBan { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblChiTietNhapKho> tblChiTietNhapKhoes { get; set; }

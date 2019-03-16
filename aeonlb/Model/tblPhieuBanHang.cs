@@ -25,7 +25,7 @@ namespace aeonlb.Model
         public string sMaNV { get; set; }
         public string sMaKH { get; set; }
         public string sKieuGiaoDich { get; set; }
-        public Nullable<float> fGiamGia { get; set; }
+        public Nullable<double> fGiamGia { get; set; }
     
         public virtual tblKhachHang tblKhachHang { get; set; }
         public virtual tblNhanVien tblNhanVien { get; set; }
