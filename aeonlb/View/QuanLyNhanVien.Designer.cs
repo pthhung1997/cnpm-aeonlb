@@ -30,9 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
+            this.sMaNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sHoTenNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sChucVuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTenDangNhapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sMatKhauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblNhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._cnpm_aeonlbDataSet = new aeonlb._cnpm_aeonlbDataSet();
-            this.tblNhanVienTableAdapter = new aeonlb._cnpm_aeonlbDataSetTableAdapters.tblNhanVienTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,11 +47,7 @@
             this.btnResetMatKhau = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.sMaNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sHoTenNVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sChucVuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sTenDangNhapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sMatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblNhanVienTableAdapter = new aeonlb._cnpm_aeonlbDataSetTableAdapters.tblNhanVienTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblNhanVienBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._cnpm_aeonlbDataSet)).BeginInit();
@@ -64,7 +64,7 @@
             this.sHoTenNVDataGridViewTextBoxColumn,
             this.sChucVuDataGridViewTextBoxColumn,
             this.sTenDangNhapDataGridViewTextBoxColumn,
-            this.sMatKhau});
+            this.sMatKhauDataGridViewTextBoxColumn});
             this.dgvNhanVien.DataSource = this.tblNhanVienBindingSource;
             this.dgvNhanVien.Location = new System.Drawing.Point(0, 0);
             this.dgvNhanVien.MultiSelect = false;
@@ -75,6 +75,42 @@
             this.dgvNhanVien.TabIndex = 0;
             this.dgvNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellContentClick);
             // 
+            // sMaNVDataGridViewTextBoxColumn
+            // 
+            this.sMaNVDataGridViewTextBoxColumn.DataPropertyName = "sMaNV";
+            this.sMaNVDataGridViewTextBoxColumn.HeaderText = "sMaNV";
+            this.sMaNVDataGridViewTextBoxColumn.Name = "sMaNVDataGridViewTextBoxColumn";
+            this.sMaNVDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sHoTenNVDataGridViewTextBoxColumn
+            // 
+            this.sHoTenNVDataGridViewTextBoxColumn.DataPropertyName = "sHoTenNV";
+            this.sHoTenNVDataGridViewTextBoxColumn.HeaderText = "sHoTenNV";
+            this.sHoTenNVDataGridViewTextBoxColumn.Name = "sHoTenNVDataGridViewTextBoxColumn";
+            this.sHoTenNVDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sChucVuDataGridViewTextBoxColumn
+            // 
+            this.sChucVuDataGridViewTextBoxColumn.DataPropertyName = "sChucVu";
+            this.sChucVuDataGridViewTextBoxColumn.HeaderText = "sChucVu";
+            this.sChucVuDataGridViewTextBoxColumn.Name = "sChucVuDataGridViewTextBoxColumn";
+            this.sChucVuDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sTenDangNhapDataGridViewTextBoxColumn
+            // 
+            this.sTenDangNhapDataGridViewTextBoxColumn.DataPropertyName = "sTenDangNhap";
+            this.sTenDangNhapDataGridViewTextBoxColumn.HeaderText = "sTenDangNhap";
+            this.sTenDangNhapDataGridViewTextBoxColumn.Name = "sTenDangNhapDataGridViewTextBoxColumn";
+            this.sTenDangNhapDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sMatKhauDataGridViewTextBoxColumn
+            // 
+            this.sMatKhauDataGridViewTextBoxColumn.DataPropertyName = "sMatKhau";
+            this.sMatKhauDataGridViewTextBoxColumn.HeaderText = "sMatKhau";
+            this.sMatKhauDataGridViewTextBoxColumn.Name = "sMatKhauDataGridViewTextBoxColumn";
+            this.sMatKhauDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sMatKhauDataGridViewTextBoxColumn.Visible = false;
+            // 
             // tblNhanVienBindingSource
             // 
             this.tblNhanVienBindingSource.DataMember = "tblNhanVien";
@@ -84,10 +120,6 @@
             // 
             this._cnpm_aeonlbDataSet.DataSetName = "_cnpm_aeonlbDataSet";
             this._cnpm_aeonlbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblNhanVienTableAdapter
-            // 
-            this.tblNhanVienTableAdapter.ClearBeforeFill = true;
             // 
             // label1
             // 
@@ -119,16 +151,20 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(577, 80);
+            this.txtName.MaxLength = 50;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(163, 20);
             this.txtName.TabIndex = 4;
+            this.txtName.TextChanged += new System.EventHandler(this.field_TextChanged);
             // 
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(577, 155);
+            this.txtUsername.MaxLength = 20;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(163, 20);
             this.txtUsername.TabIndex = 5;
+            this.txtUsername.TextChanged += new System.EventHandler(this.field_TextChanged);
             // 
             // cbbJob
             // 
@@ -138,6 +174,7 @@
             this.cbbJob.Name = "cbbJob";
             this.cbbJob.Size = new System.Drawing.Size(121, 21);
             this.cbbJob.TabIndex = 6;
+            this.cbbJob.SelectedIndexChanged += new System.EventHandler(this.field_TextChanged);
             // 
             // btnLuu
             // 
@@ -179,41 +216,9 @@
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // sMaNVDataGridViewTextBoxColumn
+            // tblNhanVienTableAdapter
             // 
-            this.sMaNVDataGridViewTextBoxColumn.DataPropertyName = "sMaNV";
-            this.sMaNVDataGridViewTextBoxColumn.HeaderText = "sMaNV";
-            this.sMaNVDataGridViewTextBoxColumn.Name = "sMaNVDataGridViewTextBoxColumn";
-            this.sMaNVDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sHoTenNVDataGridViewTextBoxColumn
-            // 
-            this.sHoTenNVDataGridViewTextBoxColumn.DataPropertyName = "sHoTenNV";
-            this.sHoTenNVDataGridViewTextBoxColumn.HeaderText = "sHoTenNV";
-            this.sHoTenNVDataGridViewTextBoxColumn.Name = "sHoTenNVDataGridViewTextBoxColumn";
-            this.sHoTenNVDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sChucVuDataGridViewTextBoxColumn
-            // 
-            this.sChucVuDataGridViewTextBoxColumn.DataPropertyName = "sChucVu";
-            this.sChucVuDataGridViewTextBoxColumn.HeaderText = "sChucVu";
-            this.sChucVuDataGridViewTextBoxColumn.Name = "sChucVuDataGridViewTextBoxColumn";
-            this.sChucVuDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sTenDangNhapDataGridViewTextBoxColumn
-            // 
-            this.sTenDangNhapDataGridViewTextBoxColumn.DataPropertyName = "sTenDangNhap";
-            this.sTenDangNhapDataGridViewTextBoxColumn.HeaderText = "sTenDangNhap";
-            this.sTenDangNhapDataGridViewTextBoxColumn.Name = "sTenDangNhapDataGridViewTextBoxColumn";
-            this.sTenDangNhapDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sMatKhau
-            // 
-            this.sMatKhau.DataPropertyName = "sMatKhau";
-            this.sMatKhau.HeaderText = "sMatKhau";
-            this.sMatKhau.Name = "sMatKhau";
-            this.sMatKhau.ReadOnly = true;
-            this.sMatKhau.Visible = false;
+            this.tblNhanVienTableAdapter.ClearBeforeFill = true;
             // 
             // QuanLyNhanVien
             // 
@@ -245,9 +250,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvNhanVien;
-        private _cnpm_aeonlbDataSet _cnpm_aeonlbDataSet;
-        private System.Windows.Forms.BindingSource tblNhanVienBindingSource;
-        private _cnpm_aeonlbDataSetTableAdapters.tblNhanVienTableAdapter tblNhanVienTableAdapter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -258,10 +260,13 @@
         private System.Windows.Forms.Button btnResetMatKhau;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnXoa;
+        private _cnpm_aeonlbDataSet _cnpm_aeonlbDataSet;
+        private System.Windows.Forms.BindingSource tblNhanVienBindingSource;
+        private _cnpm_aeonlbDataSetTableAdapters.tblNhanVienTableAdapter tblNhanVienTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn sMaNVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sHoTenNVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sChucVuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sTenDangNhapDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sMatKhau;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sMatKhauDataGridViewTextBoxColumn;
     }
 }

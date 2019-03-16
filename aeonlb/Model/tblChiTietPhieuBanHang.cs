@@ -16,7 +16,7 @@ namespace aeonlb.Model
     {
         public int iSoPhieu { get; set; }
         public string sMaHang { get; set; }
-        public float fSoLuongBan { get; set; }
+        public double fSoLuongBan { get; set; }
     
         public virtual tblHang tblHang { get; set; }
         public virtual tblPhieuBanHang tblPhieuBanHang { get; set; }

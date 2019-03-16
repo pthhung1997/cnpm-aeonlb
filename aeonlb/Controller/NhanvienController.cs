@@ -2,6 +2,7 @@
 using aeonlb.Utils;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -12,29 +13,28 @@ namespace aeonlb.Controller
 {
     class NhanvienController
     {
-        public String LayThongTinDangNhap(String username, String password)
+        public tblNhanVien LayThongTin(String username, String password)
         {
-            String chucvu = "";
+            tblNhanVien nhanVien = new tblNhanVien();
             try
             {
                 using (var db = new Entities())
                 {
                     var select = from s in db.tblNhanViens where s.sTenDangNhap.ToLower().CompareTo(username.ToLower()) == 0 && s.sMatKhau.ToLower().CompareTo(password.ToLower()) == 0 select s;
                     foreach (var data in select)
-                    {
-                        MessageBox.Show("Xin chào " + data.sHoTenNV + "!", "Đăng nhập thành công!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        chucvu = data.sChucVu;
-                    }
-                    if(select.Count() == 0)
-                    {
-                        MessageBox.Show("Không tìm thấy thông tin đăng nhập!", "Đăng nhập không thành công!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    { 
+                        nhanVien.sMaNV = data.sMaNV;
+                        nhanVien.sChucVu = data.sChucVu;
+                        nhanVien.sHoTenNV = data.sHoTenNV;
+                        nhanVien.sTenDangNhap = data.sTenDangNhap;
                     }
                 }
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.ToString(), "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            return chucvu;
+            return nhanVien;
         }
         public void updateNhanVien(tblNhanVien nhanvien)
         {
@@ -43,8 +43,19 @@ namespace aeonlb.Controller
                 var update = (from u in db.tblNhanViens where u.sMaNV == nhanvien.sMaNV select u).Single();
                 update.sChucVu = nhanvien.sChucVu;
                 update.sHoTenNV = nhanvien.sHoTenNV;
-                update.sMatKhau = nhanvien.sMatKhau;
                 db.SaveChanges();
+
+            }
+        }
+
+        public void doiMatKhau(string username, string password)
+        {
+            using (var db = new Entities())
+            {
+                var update = (from u in db.tblNhanViens where u.sTenDangNhap == username select u).Single();
+                update.sMatKhau = password;
+                db.SaveChanges();
+
             }
         }
     }

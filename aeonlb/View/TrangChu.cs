@@ -12,9 +12,14 @@ namespace aeonlb.View
 {
     public partial class TrangChu : Form
     {
-        public TrangChu()
+        private Login login;
+        private string username;
+
+        public TrangChu(Login login, string username)
         {
             InitializeComponent();
+            this.login = login;
+            this.username = username;
         }
 
         private void HangToolStripMenuItem_Click(object sender, EventArgs e)
@@ -55,7 +60,7 @@ namespace aeonlb.View
 
         private void DoiMatkhauToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DoiMatKhau doimatkhau = new DoiMatKhau();
+            DoiMatKhau doimatkhau = new DoiMatKhau(username);
             doimatkhau.ShowDialog(this);
         }
 
@@ -69,6 +74,17 @@ namespace aeonlb.View
         {
             QuanLyYCNH ycnh = new QuanLyYCNH();
             ycnh.ShowDialog(this);
+        }
+
+        private void thoatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if ((MessageBox.Show("Bạn muốn thoát khỏi chương trình ?", "Xác nhật thóat!",
+    MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+    MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes))
+            {
+                this.Hide();
+                login.Show();
+            }
         }
     }
 }
