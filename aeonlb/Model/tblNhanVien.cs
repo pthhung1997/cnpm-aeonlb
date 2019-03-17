@@ -19,6 +19,7 @@ namespace aeonlb.Model
         {
             this.tblNhapKhoes = new HashSet<tblNhapKho>();
             this.tblPhieuBanHangs = new HashSet<tblPhieuBanHang>();
+            this.tblPhieuBaoHanhs = new HashSet<tblPhieuBaoHanh>();
             this.tblYeuCauNhapKhoes = new HashSet<tblYeuCauNhapKho>();
         }
     
@@ -32,6 +33,8 @@ namespace aeonlb.Model
         public virtual ICollection<tblNhapKho> tblNhapKhoes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblPhieuBanHang> tblPhieuBanHangs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tblPhieuBaoHanh> tblPhieuBaoHanhs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblYeuCauNhapKho> tblYeuCauNhapKhoes { get; set; }
     }

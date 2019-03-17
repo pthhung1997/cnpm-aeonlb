@@ -112,6 +112,9 @@
     <Compile Include="Model\tblChiTietPhieuBanHang.cs">
       <DependentUpon>AEONLBDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\tblChiTietPhieuBaoHanh.cs">
+      <DependentUpon>AEONLBDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\tblChiTietYeuCauNhap.cs">
       <DependentUpon>AEONLBDataModel.tt</DependentUpon>
     </Compile>
@@ -128,6 +131,9 @@
       <DependentUpon>AEONLBDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\tblPhieuBanHang.cs">
+      <DependentUpon>AEONLBDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tblPhieuBaoHanh.cs">
       <DependentUpon>AEONLBDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\tblYeuCauNhapKho.cs">
@@ -160,6 +166,12 @@
     <Compile Include="View\QuanLyBaoCao.Designer.cs">
       <DependentUpon>QuanLyBaoCao.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\QuanLyBaoHanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QuanLyBaoHanh.Designer.cs">
+      <DependentUpon>QuanLyBaoHanh.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\QuanLyKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,12 +202,10 @@
     <Compile Include="View\TrangChu.Designer.cs">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\QuanLyYCNH.cs">
+    <Compile Include="View\YeuCauNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\QuanLyYCNH.Designer.cs">
-      <DependentUpon>QuanLyYCNH.cs</DependentUpon>
-    </Compile>
+    <Compile Include="View\YeuCauNhap.Designer.cs" />
     <Compile Include="_cnpm_aeonlbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -216,6 +226,9 @@
     <EmbeddedResource Include="View\DoiMatKhau.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\QuanLyBaoHanh.resx">
+      <DependentUpon>QuanLyBaoHanh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\QuanLyNhanVien.resx">
       <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,9 +238,7 @@
     <EmbeddedResource Include="View\TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\QuanLyYCNH.resx">
-      <DependentUpon>QuanLyYCNH.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="View\YeuCauNhap.resx" />
     <EntityDeploy Include="Model\AEONLBDataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>AEONLBDataModel.Designer.cs</LastGenOutput>
@@ -265,6 +276,13 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="App_Data\cnpm-aeonlb_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>cnpm-aeonlb.mdf</DependentUpon>
+    </Content>
+    <Content Include="cnpm-aeonlb.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cnpm-aeonlb_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>cnpm-aeonlb.mdf</DependentUpon>
     </Content>

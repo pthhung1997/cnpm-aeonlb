@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="EntityDBModelStoreContainer" CdmEntityContainer="Entities">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="EntityDBModel.sysdiagram">
+      <EntityTypeMapping TypeName="Model.sysdiagram">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -12,8 +12,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tblChiTietPhieuBaoHanhs">
+      <EntityTypeMapping TypeName="Model.tblChiTietPhieuBaoHanh">
+        <MappingFragment StoreEntitySet="tblChiTietPhieuBaoHanh">
+          <ScalarProperty Name="sMaChiTietPhieuBH" ColumnName="sMaChiTietPhieuBH" />
+          <ScalarProperty Name="sMaPhieuBaoHanh" ColumnName="sMaPhieuBaoHanh" />
+          <ScalarProperty Name="sMaHang" ColumnName="sMaHang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="tblHangs">
-      <EntityTypeMapping TypeName="EntityDBModel.tblHang">
+      <EntityTypeMapping TypeName="Model.tblHang">
         <MappingFragment StoreEntitySet="tblHang">
           <ScalarProperty Name="sMaHang" ColumnName="sMaHang" />
           <ScalarProperty Name="sTenHang" ColumnName="sTenHang" />
@@ -25,7 +34,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="tblKhachHangs">
-      <EntityTypeMapping TypeName="EntityDBModel.tblKhachHang">
+      <EntityTypeMapping TypeName="Model.tblKhachHang">
         <MappingFragment StoreEntitySet="tblKhachHang">
           <ScalarProperty Name="sMaKH" ColumnName="sMaKH" />
           <ScalarProperty Name="sTenKH" ColumnName="sTenKH" />
@@ -35,7 +44,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="tblNhanViens">
-      <EntityTypeMapping TypeName="EntityDBModel.tblNhanVien">
+      <EntityTypeMapping TypeName="Model.tblNhanVien">
         <MappingFragment StoreEntitySet="tblNhanVien">
           <ScalarProperty Name="sMaNV" ColumnName="sMaNV" />
           <ScalarProperty Name="sHoTenNV" ColumnName="sHoTenNV" />
@@ -46,7 +55,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="tblNhapKhoes">
-      <EntityTypeMapping TypeName="EntityDBModel.tblNhapKho">
+      <EntityTypeMapping TypeName="Model.tblNhapKho">
         <MappingFragment StoreEntitySet="tblNhapKho">
           <ScalarProperty Name="sMaNhapKho" ColumnName="sMaNhapKho" />
           <ScalarProperty Name="dNgayNhapKho" ColumnName="dNgayNhapKho" />
@@ -55,7 +64,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="tblPhieuBanHangs">
-      <EntityTypeMapping TypeName="EntityDBModel.tblPhieuBanHang">
+      <EntityTypeMapping TypeName="Model.tblPhieuBanHang">
         <MappingFragment StoreEntitySet="tblPhieuBanHang">
           <ScalarProperty Name="iSoPhieu" ColumnName="iSoPhieu" />
           <ScalarProperty Name="dThoiGianBan" ColumnName="dThoiGianBan" />
@@ -66,8 +75,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tblPhieuBaoHanhs">
+      <EntityTypeMapping TypeName="Model.tblPhieuBaoHanh">
+        <MappingFragment StoreEntitySet="tblPhieuBaoHanh">
+          <ScalarProperty Name="sMaPhieuBaoHanh" ColumnName="sMaPhieuBaoHanh" />
+          <ScalarProperty Name="sMaNhanVien" ColumnName="sMaNhanVien" />
+          <ScalarProperty Name="sMaKhachHang" ColumnName="sMaKhachHang" />
+          <ScalarProperty Name="dThoiGianBaoHanh" ColumnName="dThoiGianBaoHanh" />
+          <ScalarProperty Name="sTrangThai" ColumnName="sTrangThai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="tblYeuCauNhapKhoes">
-      <EntityTypeMapping TypeName="EntityDBModel.tblYeuCauNhapKho">
+      <EntityTypeMapping TypeName="Model.tblYeuCauNhapKho">
         <MappingFragment StoreEntitySet="tblYeuCauNhapKho">
           <ScalarProperty Name="sMaYeuCauNhapKho" ColumnName="sMaYeuCauNhapKho" />
           <ScalarProperty Name="sMaNV" ColumnName="sMaNV" />
@@ -77,7 +97,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="tblChiTietNhapKhoes">
-      <EntityTypeMapping TypeName="EntityDBModel.tblChiTietNhapKho">
+      <EntityTypeMapping TypeName="Model.tblChiTietNhapKho">
         <MappingFragment StoreEntitySet="tblChiTietNhapKho">
           <ScalarProperty Name="sMaHang" ColumnName="sMaHang" />
           <ScalarProperty Name="sMaNhapKho" ColumnName="sMaNhapKho" />
@@ -86,7 +106,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="tblChiTietPhieuBanHangs">
-      <EntityTypeMapping TypeName="EntityDBModel.tblChiTietPhieuBanHang">
+      <EntityTypeMapping TypeName="Model.tblChiTietPhieuBanHang">
         <MappingFragment StoreEntitySet="tblChiTietPhieuBanHang">
           <ScalarProperty Name="iSoPhieu" ColumnName="iSoPhieu" />
           <ScalarProperty Name="sMaHang" ColumnName="sMaHang" />
@@ -95,7 +115,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="tblChiTietYeuCauNhaps">
-      <EntityTypeMapping TypeName="EntityDBModel.tblChiTietYeuCauNhap">
+      <EntityTypeMapping TypeName="Model.tblChiTietYeuCauNhap">
         <MappingFragment StoreEntitySet="tblChiTietYeuCauNhap">
           <ScalarProperty Name="sMaHang" ColumnName="sMaHang" />
           <ScalarProperty Name="sMaYeuCauNhapKho" ColumnName="sMaYeuCauNhapKho" />

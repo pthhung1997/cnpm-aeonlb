@@ -26,11 +26,13 @@ namespace aeonlb.Model
         }
     
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<tblChiTietPhieuBaoHanh> tblChiTietPhieuBaoHanhs { get; set; }
         public virtual DbSet<tblHang> tblHangs { get; set; }
         public virtual DbSet<tblKhachHang> tblKhachHangs { get; set; }
         public virtual DbSet<tblNhanVien> tblNhanViens { get; set; }
         public virtual DbSet<tblNhapKho> tblNhapKhoes { get; set; }
         public virtual DbSet<tblPhieuBanHang> tblPhieuBanHangs { get; set; }
+        public virtual DbSet<tblPhieuBaoHanh> tblPhieuBaoHanhs { get; set; }
         public virtual DbSet<tblYeuCauNhapKho> tblYeuCauNhapKhoes { get; set; }
         public virtual DbSet<tblChiTietNhapKho> tblChiTietNhapKhoes { get; set; }
         public virtual DbSet<tblChiTietPhieuBanHang> tblChiTietPhieuBanHangs { get; set; }

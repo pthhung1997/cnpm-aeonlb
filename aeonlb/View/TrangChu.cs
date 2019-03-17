@@ -72,7 +72,7 @@ namespace aeonlb.View
 
         private void yeuCauNhapHangToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            QuanLyYCNH ycnh = new QuanLyYCNH();
+            YeuCauNhap ycnh = new YeuCauNhap();
             ycnh.ShowDialog(this);
         }
 
@@ -85,6 +85,12 @@ namespace aeonlb.View
                 this.Hide();
                 login.Show();
             }
+        }
+
+        private void baoHanhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyBaoHanh qlbh = new QuanLyBaoHanh();
+            qlbh.ShowDialog(this);
         }
     }
 }

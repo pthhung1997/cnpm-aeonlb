@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="EntityDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="sysdiagrams">
     <Key>
       <PropertyRef Name="diagram_id" />
@@ -33,6 +33,14 @@ warning 6002: The table/view 'D:\CNPM-AEONLB\AEONLB\CNPM-AEONLB.MDF.dbo.tblChiTi
     <Property Name="iSoPhieu" Type="int" Nullable="false" />
     <Property Name="sMaHang" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="fSoLuongBan" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblChiTietPhieuBaoHanh">
+    <Key>
+      <PropertyRef Name="sMaChiTietPhieuBH" />
+    </Key>
+    <Property Name="sMaChiTietPhieuBH" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="sMaPhieuBaoHanh" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="sMaHang" Type="varchar" MaxLength="100" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'D:\CNPM-AEONLB\AEONLB\CNPM-AEONLB.MDF.dbo.tblChiTietYeuCauNhap' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -95,6 +103,16 @@ warning 6002: The table/view 'D:\CNPM-AEONLB\AEONLB\CNPM-AEONLB.MDF.dbo.tblChiTi
     <Property Name="sKieuGiaoDich" Type="nvarchar" MaxLength="20" />
     <Property Name="fGiamGia" Type="float" />
   </EntityType>
+  <EntityType Name="tblPhieuBaoHanh">
+    <Key>
+      <PropertyRef Name="sMaPhieuBaoHanh" />
+    </Key>
+    <Property Name="sMaPhieuBaoHanh" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="sMaNhanVien" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="sMaKhachHang" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="dThoiGianBaoHanh" Type="date" />
+    <Property Name="sTrangThai" Type="varchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="tblYeuCauNhapKho">
     <Key>
       <PropertyRef Name="sMaYeuCauNhapKho" />
@@ -149,6 +167,30 @@ warning 6002: The table/view 'D:\CNPM-AEONLB\AEONLB\CNPM-AEONLB.MDF.dbo.tblChiTi
       </Principal>
       <Dependent Role="tblChiTietPhieuBanHang">
         <PropertyRef Name="iSoPhieu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblChiTietPhieuBaoHanh_tblHang">
+    <End Role="tblHang" Type="Self.tblHang" Multiplicity="1" />
+    <End Role="tblChiTietPhieuBaoHanh" Type="Self.tblChiTietPhieuBaoHanh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblHang">
+        <PropertyRef Name="sMaHang" />
+      </Principal>
+      <Dependent Role="tblChiTietPhieuBaoHanh">
+        <PropertyRef Name="sMaHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblChiTietPhieuBaoHanh_tblPhieuBaoHanh">
+    <End Role="tblPhieuBaoHanh" Type="Self.tblPhieuBaoHanh" Multiplicity="1" />
+    <End Role="tblChiTietPhieuBaoHanh" Type="Self.tblChiTietPhieuBaoHanh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPhieuBaoHanh">
+        <PropertyRef Name="sMaPhieuBaoHanh" />
+      </Principal>
+      <Dependent Role="tblChiTietPhieuBaoHanh">
+        <PropertyRef Name="sMaPhieuBaoHanh" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -212,6 +254,30 @@ warning 6002: The table/view 'D:\CNPM-AEONLB\AEONLB\CNPM-AEONLB.MDF.dbo.tblChiTi
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_tblPhieuBaoHanh_tblKhachHang">
+    <End Role="tblKhachHang" Type="Self.tblKhachHang" Multiplicity="1" />
+    <End Role="tblPhieuBaoHanh" Type="Self.tblPhieuBaoHanh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblKhachHang">
+        <PropertyRef Name="sMaKH" />
+      </Principal>
+      <Dependent Role="tblPhieuBaoHanh">
+        <PropertyRef Name="sMaKhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPhieuBaoHanh_tblNhanVien">
+    <End Role="tblNhanVien" Type="Self.tblNhanVien" Multiplicity="1" />
+    <End Role="tblPhieuBaoHanh" Type="Self.tblPhieuBaoHanh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblNhanVien">
+        <PropertyRef Name="sMaNV" />
+      </Principal>
+      <Dependent Role="tblPhieuBaoHanh">
+        <PropertyRef Name="sMaNhanVien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_tblYeuCauNhapKho_tblNhanVien">
     <End Role="tblNhanVien" Type="Self.tblNhanVien" Multiplicity="1" />
     <End Role="tblYeuCauNhapKho" Type="Self.tblYeuCauNhapKho" Multiplicity="*" />
@@ -224,13 +290,15 @@ warning 6002: The table/view 'D:\CNPM-AEONLB\AEONLB\CNPM-AEONLB.MDF.dbo.tblChiTi
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="EntityDBModelStoreContainer">
+  <EntityContainer Name="ModelStoreContainer">
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblChiTietPhieuBaoHanh" EntityType="Self.tblChiTietPhieuBaoHanh" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblHang" EntityType="Self.tblHang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblKhachHang" EntityType="Self.tblKhachHang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblNhanVien" EntityType="Self.tblNhanVien" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblNhapKho" EntityType="Self.tblNhapKho" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblPhieuBanHang" EntityType="Self.tblPhieuBanHang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPhieuBaoHanh" EntityType="Self.tblPhieuBaoHanh" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblYeuCauNhapKho" EntityType="Self.tblYeuCauNhapKho" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tblChiTietNhapKho" EntityType="Self.tblChiTietNhapKho" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
@@ -269,6 +337,14 @@ warning 6002: The table/view 'D:\CNPM-AEONLB\AEONLB\CNPM-AEONLB.MDF.dbo.tblChiTi
       <End Role="tblPhieuBanHang" EntitySet="tblPhieuBanHang" />
       <End Role="tblChiTietPhieuBanHang" EntitySet="tblChiTietPhieuBanHang" />
     </AssociationSet>
+    <AssociationSet Name="FK_tblChiTietPhieuBaoHanh_tblHang" Association="Self.FK_tblChiTietPhieuBaoHanh_tblHang">
+      <End Role="tblHang" EntitySet="tblHang" />
+      <End Role="tblChiTietPhieuBaoHanh" EntitySet="tblChiTietPhieuBaoHanh" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblChiTietPhieuBaoHanh_tblPhieuBaoHanh" Association="Self.FK_tblChiTietPhieuBaoHanh_tblPhieuBaoHanh">
+      <End Role="tblPhieuBaoHanh" EntitySet="tblPhieuBaoHanh" />
+      <End Role="tblChiTietPhieuBaoHanh" EntitySet="tblChiTietPhieuBaoHanh" />
+    </AssociationSet>
     <AssociationSet Name="FK_tblChiTietYeuCauNhap_tblHang" Association="Self.FK_tblChiTietYeuCauNhap_tblHang">
       <End Role="tblHang" EntitySet="tblHang" />
       <End Role="tblChiTietYeuCauNhap" EntitySet="tblChiTietYeuCauNhap" />
@@ -288,6 +364,14 @@ warning 6002: The table/view 'D:\CNPM-AEONLB\AEONLB\CNPM-AEONLB.MDF.dbo.tblChiTi
     <AssociationSet Name="FK_tblPhieuBanHang_tblNhanVien" Association="Self.FK_tblPhieuBanHang_tblNhanVien">
       <End Role="tblNhanVien" EntitySet="tblNhanVien" />
       <End Role="tblPhieuBanHang" EntitySet="tblPhieuBanHang" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPhieuBaoHanh_tblKhachHang" Association="Self.FK_tblPhieuBaoHanh_tblKhachHang">
+      <End Role="tblKhachHang" EntitySet="tblKhachHang" />
+      <End Role="tblPhieuBaoHanh" EntitySet="tblPhieuBaoHanh" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPhieuBaoHanh_tblNhanVien" Association="Self.FK_tblPhieuBaoHanh_tblNhanVien">
+      <End Role="tblNhanVien" EntitySet="tblNhanVien" />
+      <End Role="tblPhieuBaoHanh" EntitySet="tblPhieuBaoHanh" />
     </AssociationSet>
     <AssociationSet Name="FK_tblYeuCauNhapKho_tblNhanVien" Association="Self.FK_tblYeuCauNhapKho_tblNhanVien">
       <End Role="tblNhanVien" EntitySet="tblNhanVien" />

@@ -17,6 +17,7 @@ namespace aeonlb.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tblHang()
         {
+            this.tblChiTietPhieuBaoHanhs = new HashSet<tblChiTietPhieuBaoHanh>();
             this.tblChiTietNhapKhoes = new HashSet<tblChiTietNhapKho>();
             this.tblChiTietPhieuBanHangs = new HashSet<tblChiTietPhieuBanHang>();
             this.tblChiTietYeuCauNhaps = new HashSet<tblChiTietYeuCauNhap>();
@@ -29,6 +30,8 @@ namespace aeonlb.Model
         public string sDonViTinh { get; set; }
         public double fGiaBan { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tblChiTietPhieuBaoHanh> tblChiTietPhieuBaoHanhs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblChiTietNhapKho> tblChiTietNhapKhoes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

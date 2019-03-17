@@ -35,19 +35,20 @@
             this.txtMahang = new System.Windows.Forms.TextBox();
             this.txtMaYCN = new System.Windows.Forms.TextBox();
             this.txtSLYC = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Thêm = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this._cnpm_aeonlbDataSet = new aeonlb._cnpm_aeonlbDataSet();
-            this.tblChiTietYeuCauNhapBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblChiTietYeuCauNhapTableAdapter = new aeonlb._cnpm_aeonlbDataSetTableAdapters.tblChiTietYeuCauNhapTableAdapter();
+            this.dgvCTYCNH = new System.Windows.Forms.DataGridView();
             this.sMaHangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sMaYeuCauNhapKhoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fSoLuongYeuCauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._cnpm_aeonlbDataSet)).BeginInit();
+            this.tblChiTietYeuCauNhapBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._cnpm_aeonlbDataSet = new aeonlb._cnpm_aeonlbDataSet();
+            this.Thêm = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.tblChiTietYeuCauNhapTableAdapter = new aeonlb._cnpm_aeonlbDataSetTableAdapters.tblChiTietYeuCauNhapTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCTYCNH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblChiTietYeuCauNhapBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cnpm_aeonlbDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -99,60 +100,19 @@
             this.txtSLYC.Size = new System.Drawing.Size(163, 20);
             this.txtSLYC.TabIndex = 5;
             // 
-            // dataGridView1
+            // dgvCTYCNH
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvCTYCNH.AutoGenerateColumns = false;
+            this.dgvCTYCNH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCTYCNH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sMaHangDataGridViewTextBoxColumn,
             this.sMaYeuCauNhapKhoDataGridViewTextBoxColumn,
             this.fSoLuongYeuCauDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tblChiTietYeuCauNhapBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(368, 62);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(344, 285);
-            this.dataGridView1.TabIndex = 6;
-            // 
-            // Thêm
-            // 
-            this.Thêm.Location = new System.Drawing.Point(24, 249);
-            this.Thêm.Name = "Thêm";
-            this.Thêm.Size = new System.Drawing.Size(75, 23);
-            this.Thêm.TabIndex = 7;
-            this.Thêm.Text = "Thêm";
-            this.Thêm.UseVisualStyleBackColor = true;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(145, 249);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 23);
-            this.btnSua.TabIndex = 8;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(270, 249);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 23);
-            this.btnXoa.TabIndex = 9;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            // 
-            // _cnpm_aeonlbDataSet
-            // 
-            this._cnpm_aeonlbDataSet.DataSetName = "_cnpm_aeonlbDataSet";
-            this._cnpm_aeonlbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblChiTietYeuCauNhapBindingSource
-            // 
-            this.tblChiTietYeuCauNhapBindingSource.DataMember = "tblChiTietYeuCauNhap";
-            this.tblChiTietYeuCauNhapBindingSource.DataSource = this._cnpm_aeonlbDataSet;
-            // 
-            // tblChiTietYeuCauNhapTableAdapter
-            // 
-            this.tblChiTietYeuCauNhapTableAdapter.ClearBeforeFill = true;
+            this.dgvCTYCNH.DataSource = this.tblChiTietYeuCauNhapBindingSource;
+            this.dgvCTYCNH.Location = new System.Drawing.Point(526, 64);
+            this.dgvCTYCNH.Name = "dgvCTYCNH";
+            this.dgvCTYCNH.Size = new System.Drawing.Size(345, 285);
+            this.dgvCTYCNH.TabIndex = 6;
             // 
             // sMaHangDataGridViewTextBoxColumn
             // 
@@ -172,15 +132,70 @@
             this.fSoLuongYeuCauDataGridViewTextBoxColumn.HeaderText = "fSoLuongYeuCau";
             this.fSoLuongYeuCauDataGridViewTextBoxColumn.Name = "fSoLuongYeuCauDataGridViewTextBoxColumn";
             // 
+            // tblChiTietYeuCauNhapBindingSource
+            // 
+            this.tblChiTietYeuCauNhapBindingSource.DataMember = "tblChiTietYeuCauNhap";
+            this.tblChiTietYeuCauNhapBindingSource.DataSource = this._cnpm_aeonlbDataSet;
+            // 
+            // _cnpm_aeonlbDataSet
+            // 
+            this._cnpm_aeonlbDataSet.DataSetName = "_cnpm_aeonlbDataSet";
+            this._cnpm_aeonlbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // Thêm
+            // 
+            this.Thêm.Location = new System.Drawing.Point(24, 249);
+            this.Thêm.Name = "Thêm";
+            this.Thêm.Size = new System.Drawing.Size(75, 23);
+            this.Thêm.TabIndex = 7;
+            this.Thêm.Text = "Thêm";
+            this.Thêm.UseVisualStyleBackColor = true;
+            this.Thêm.Click += new System.EventHandler(this.Thêm_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Location = new System.Drawing.Point(145, 249);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(75, 23);
+            this.btnSua.TabIndex = 8;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(270, 249);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 23);
+            this.btnXoa.TabIndex = 9;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // tblChiTietYeuCauNhapTableAdapter
+            // 
+            this.tblChiTietYeuCauNhapTableAdapter.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(400, 249);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Tìm Kiếm";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ChiTietYeuCauNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(721, 444);
+            this.ClientSize = new System.Drawing.Size(920, 444);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.Thêm);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvCTYCNH);
             this.Controls.Add(this.txtSLYC);
             this.Controls.Add(this.txtMaYCN);
             this.Controls.Add(this.txtMahang);
@@ -190,9 +205,9 @@
             this.Name = "ChiTietYeuCauNhapHang";
             this.Text = "ChiTietYeuCauNhapHang";
             this.Load += new System.EventHandler(this.ChiTietYeuCauNhapHang_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._cnpm_aeonlbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCTYCNH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblChiTietYeuCauNhapBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._cnpm_aeonlbDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,7 +221,7 @@
         private System.Windows.Forms.TextBox txtMahang;
         private System.Windows.Forms.TextBox txtMaYCN;
         private System.Windows.Forms.TextBox txtSLYC;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCTYCNH;
         private System.Windows.Forms.Button Thêm;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
@@ -216,5 +231,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sMaHangDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sMaYeuCauNhapKhoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fSoLuongYeuCauDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
     }
 }
