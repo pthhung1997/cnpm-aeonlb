@@ -237,7 +237,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvNhanVien);
             this.Name = "QuanLyNhanVien";
-            this.Text = "QuanLyNhanVien";
+            this.Text = "Quản lý nhân viên";
             this.Load += new System.EventHandler(this.QuanLyNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblNhanVienBindingSource)).EndInit();

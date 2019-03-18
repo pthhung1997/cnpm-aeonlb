@@ -20,7 +20,6 @@ namespace aeonlb
         {
             InitializeComponent();
         }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             NhanvienController nvController = new NhanvienController();
@@ -30,25 +29,20 @@ namespace aeonlb
                 return;
             };
             tblNhanVien nhanvien = nvController.LayThongTin(txtUsername.Text, txtPassword.Text);
-            if(nhanvien.sMaNV != null && nhanvien.sMaNV.Length > 0)
+            if (nhanvien.sMaNV != null && nhanvien.sMaNV.Length > 0)
             {
                 MessageBox.Show("Xin chào " + nhanvien.sHoTenNV + "!", "Đăng nhập thành công!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TrangChu formTrangChu = new TrangChu(this, txtUsername.Text);
+                txtPassword.Text = "";
+                txtUsername.Text = "";
                 this.Hide();
                 formTrangChu.Show();
-            }else
+            }
+            else
             {
                 MessageBox.Show("Không tìm thấy thông tin đăng nhập!", "Đăng nhập không thành công!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtPassword.Text = "";
                 txtUsername.Text = "";
-            }
-        }
-        protected override void OnKeyDown(KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                SelectNextControl(ActiveControl, true, true, true, true);
-                e.Handled = true;
             }
         }
     }

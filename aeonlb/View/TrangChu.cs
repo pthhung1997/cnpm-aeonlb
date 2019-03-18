@@ -83,6 +83,7 @@ namespace aeonlb.View
     MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes))
             {
                 this.Hide();
+                this.username = "";
                 login.Show();
             }
         }

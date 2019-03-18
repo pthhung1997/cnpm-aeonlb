@@ -230,7 +230,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "YeuCauNhap";
-            this.Text = "YeuCauNhap";
+            this.Text = "Yêu cầu nhập hàng";
             this.Load += new System.EventHandler(this.YeuCauNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvYCN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblYeuCauNhapKhoBindingSource)).EndInit();

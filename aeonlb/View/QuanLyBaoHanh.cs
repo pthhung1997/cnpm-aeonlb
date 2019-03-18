@@ -23,5 +23,10 @@ namespace aeonlb.View
             this.tblPhieuBaoHanhTableAdapter.Fill(this._cnpm_aeonlbDataSet.tblPhieuBaoHanh);
 
         }
+
+        private void btnXoaMatHang_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

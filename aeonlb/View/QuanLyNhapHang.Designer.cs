@@ -209,7 +209,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvQLNH);
             this.Name = "QuanLyNhapHang";
-            this.Text = "QuanLyNhapHang";
+            this.Text = "Quản lý nhập hàng";
             this.Load += new System.EventHandler(this.QuanLyNhapHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLNH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblNhapKhoBindingSource)).EndInit();

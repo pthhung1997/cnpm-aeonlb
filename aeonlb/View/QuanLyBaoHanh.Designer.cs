@@ -76,7 +76,7 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(514, 38);
+            this.dataGridView2.Location = new System.Drawing.Point(514, 58);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(240, 150);
             this.dataGridView2.TabIndex = 2;
@@ -84,7 +84,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(279, 224);
+            this.label2.Location = new System.Drawing.Point(523, 31);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 13);
             this.label2.TabIndex = 3;
@@ -92,12 +92,13 @@
             // 
             // btnXoaMatHang
             // 
-            this.btnXoaMatHang.Location = new System.Drawing.Point(421, 220);
+            this.btnXoaMatHang.Location = new System.Drawing.Point(648, 24);
             this.btnXoaMatHang.Name = "btnXoaMatHang";
             this.btnXoaMatHang.Size = new System.Drawing.Size(94, 23);
             this.btnXoaMatHang.TabIndex = 4;
             this.btnXoaMatHang.Text = "Xóa mặt hàng";
             this.btnXoaMatHang.UseVisualStyleBackColor = true;
+            this.btnXoaMatHang.Click += new System.EventHandler(this.btnXoaMatHang_Click);
             // 
             // comboBox1
             // 

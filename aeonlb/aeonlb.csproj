@@ -205,7 +205,9 @@
     <Compile Include="View\YeuCauNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\YeuCauNhap.Designer.cs" />
+    <Compile Include="View\YeuCauNhap.designer.cs">
+      <DependentUpon>YeuCauNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="_cnpm_aeonlbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -226,11 +228,17 @@
     <EmbeddedResource Include="View\DoiMatKhau.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\GioiThieu.resx">
+      <DependentUpon>GioiThieu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\QuanLyBaoHanh.resx">
       <DependentUpon>QuanLyBaoHanh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\QuanLyNhanVien.resx">
       <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QuanLyNhapHang.resx">
+      <DependentUpon>QuanLyNhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\QuanLySanPham.resx">
       <DependentUpon>QuanLySanPham.cs</DependentUpon>
@@ -238,7 +246,9 @@
     <EmbeddedResource Include="View\TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\YeuCauNhap.resx" />
+    <EmbeddedResource Include="View\YeuCauNhap.resx">
+      <DependentUpon>YeuCauNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Model\AEONLBDataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>AEONLBDataModel.Designer.cs</LastGenOutput>
