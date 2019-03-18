@@ -36,6 +36,25 @@ namespace aeonlb.Controller
             }
             return nhanVien;
         }
+
+        public bool checkUsernameTonTai(String username)
+        {
+            bool check;
+            try
+            {
+                using (var db = new Entities())
+                {
+                    var select = (from s in db.tblNhanViens where s.sTenDangNhap.ToLower().CompareTo(username.ToLower()) == 0 select s).Single();
+                    check = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                check = false;
+            }
+            return check;
+        }
+
         public void updateNhanVien(tblNhanVien nhanvien)
         {
             using (var db = new Entities())
@@ -52,10 +71,15 @@ namespace aeonlb.Controller
         {
             using (var db = new Entities())
             {
-                var update = (from u in db.tblNhanViens where u.sTenDangNhap == username select u).Single();
-                update.sMatKhau = password;
-                db.SaveChanges();
-
+                try
+                {
+                    var update = (from u in db.tblNhanViens where u.sTenDangNhap.ToLower().CompareTo(username.ToLower()) == 0 select u).Single();
+                    update.sMatKhau = password;
+                    db.SaveChanges();
+                }catch(Exception ex)
+                {
+                    MessageBox.Show(ex.ToString(), "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

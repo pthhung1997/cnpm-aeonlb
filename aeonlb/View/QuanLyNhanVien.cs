@@ -76,6 +76,11 @@ namespace aeonlb.View
                     MessageBox.Show("Tên tài khoản:\n + Bắt đầu bằng 1 chữ cái \n + Chỉ chứa chữ cái, số hoặc các dấu ._- \n + Kết thúc bằng một chữ cái hoặc số \n + Phân biệt hoa thường", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 };
+                if (nhanvienController.checkUsernameTonTai(nhanvien.sTenDangNhap))
+                {
+                    MessageBox.Show("Tên tài khoản đã tồn tại", "Tạo tài khoản không thành công", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 id = Guid.NewGuid().ToString();
                 _cnpm_aeonlbDataSet.tblNhanVienRow newRow= _cnpm_aeonlbDataSet.tblNhanVien.NewtblNhanVienRow();
                 newRow.sMaNV = id;
@@ -87,7 +92,7 @@ namespace aeonlb.View
                 {
                     this._cnpm_aeonlbDataSet.tblNhanVien.Rows.Add(newRow);
                     this.tblNhanVienTableAdapter.Update(this._cnpm_aeonlbDataSet.tblNhanVien);
-                    MessageBox.Show("Tạo tài khoản thành công. \n     + Mật khẩu: \"" + newRow.sMatKhau + "\" \n     + Tên tài khoản: \"" + nhanvien.sTenDangNhap + "\"", "Tạo tài khoản thành công!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Tạo tài khoản thành công. \n     + Tên tài khoản: \"" + nhanvien.sTenDangNhap + "\" \n     + Mật khẩu: \"" + newRow.sMatKhau + "\"", "Tạo tài khoản thành công!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch(Exception ex)
                 {
@@ -151,7 +156,7 @@ namespace aeonlb.View
 
         private void field_TextChanged(object sender, EventArgs e)
         {
-            if (cbbJob.SelectedIndex != -1 && txtName.Text.Trim().Length > 0 && txtUsername.Text.Length > 6)
+            if (cbbJob.SelectedIndex != -1 && txtName.Text.Trim().Length > 0 && txtUsername.Text.Length >= 6)
             {
                 btnLuu.Enabled = true;
             }

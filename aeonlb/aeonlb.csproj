@@ -289,13 +289,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>cnpm-aeonlb.mdf</DependentUpon>
     </Content>
-    <Content Include="cnpm-aeonlb.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="cnpm-aeonlb_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>cnpm-aeonlb.mdf</DependentUpon>
-    </Content>
     <Content Include="Model\AEONLBDataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>AEONLBDataModel.edmx</DependentUpon>
